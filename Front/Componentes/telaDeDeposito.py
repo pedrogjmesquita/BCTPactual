@@ -12,7 +12,7 @@ class Deposito(QMainWindow):
 
     def setup_ui(self):
 
-        uic.loadUi('telaDeDeposito.ui', self)
+        uic.loadUi('Front\UIs\\telaDeDeposito.ui', self)
 
         self.pushButton_2.clicked.connect(self.cancelOperacao)
         self.pushButton.clicked.connect(self.confirmOperacao)

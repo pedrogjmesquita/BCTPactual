@@ -1,7 +1,7 @@
 import RPi.GPIO as gpio 
 import time
 from os import system
-from menuPrincipal import Menu
+from Front.Componentes.menuPrincipal import Menu
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
