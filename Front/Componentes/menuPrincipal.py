@@ -16,11 +16,11 @@ class Menu(QMainWindow):
         
         self.tela_de_deposito = Deposito()
         self.label = QLabel(self, text="Chave PIX:", font=QtGui.QFont("Arial", 22))
-        self.textfield = QLineEdit(self, placeholderText="Digite a chave PIX", font=QtGui.QFont("Arial", 22))
+        self.email_field = QLineEdit(self, placeholderText="Digite a chave PIX", font=QtGui.QFont("Arial", 22))
         self.proximo = QPushButton(self, text="Próximo", font=QtGui.QFont("Arial", 22))
         self.proximo.hide()
         self.label.hide()
-        self.textfield.hide()
+        self.email_field.hide()
         
         self.startButton.clicked.connect(self.startOperacao)
         self.proximo.clicked.connect(self.comecaDeposito)
@@ -30,15 +30,15 @@ class Menu(QMainWindow):
         self.verticalLayout = QVBoxLayout()
         self.horizontalLayout.addLayout(self.verticalLayout)
         self.verticalLayout.addWidget(self.label)
-        self.verticalLayout.addWidget(self.textfield)
+        self.verticalLayout.addWidget(self.email_field)
         self.verticalLayout.addWidget(self.proximo)
         self.label.show()
-        self.textfield.show()
+        self.email_field.show()
         self.proximo.show()
 
 
     def comecaDeposito(self):
-        self.tela_de_deposito.set_pix(self.textfield.text())
+        self.tela_de_deposito.set_pix(self.email_field.text())
         self.tela_de_deposito.show()
         self.tela_de_deposito.reset_montante()
         self.tela_de_deposito.setFocus(True)

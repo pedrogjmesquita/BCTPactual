@@ -1,5 +1,6 @@
 from PyQt5 import uic, QtGui
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
+from Back.email_sender import EmailClient
 
 class Deposito(QMainWindow):
 
@@ -60,6 +61,7 @@ class Deposito(QMainWindow):
         resposta = msg.buttonRole(msg.clickedButton())
         if resposta == QMessageBox.YesRole:
             self.finalizaOperacao()
+            
             self.close()
         else:
             pass
@@ -71,3 +73,5 @@ class Deposito(QMainWindow):
         msg.setIcon(QMessageBox.Information)
         msg.setWindowTitle("Operação finalizada")
         msg.exec_()
+        client = EmailClient()
+        client.send(self.pix, f'Detectamos um deposito de R${self.montante},00 em sua conta. Obrigado pela confiança em nós!\n\nAtenciosamente,\nBCT Pactual'.encode('utf-8'))
