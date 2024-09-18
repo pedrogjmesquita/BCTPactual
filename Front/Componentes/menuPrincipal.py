@@ -1,6 +1,6 @@
 from PyQt5 import uic, QtGui
 from PyQt5.QtWidgets import QMainWindow, QPushButton, QLabel, QLineEdit, QVBoxLayout
-from telaDeDeposito import Deposito
+from Front.Componentes.telaDeDeposito import Deposito
 
 class Menu(QMainWindow):
     
@@ -11,7 +11,7 @@ class Menu(QMainWindow):
 
     def setup_ui(self, ui_name: str):
 
-        uic.loadUi('Front\UIs\menuPrincipal.ui', self)
+        uic.loadUi('Front\\UIs\\menuPrincipal.ui', self)
 #         self.show()
         
         self.tela_de_deposito = Deposito()
