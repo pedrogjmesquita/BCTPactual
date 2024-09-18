@@ -11,7 +11,7 @@ class Menu(QMainWindow):
 
     def setup_ui(self, ui_name: str):
 
-        uic.loadUi('Front\\UIs\\menuPrincipal.ui', self)
+        uic.loadUi(r'Front/UIs/menuPrincipal.ui', self)
 #         self.show()
         
         self.tela_de_deposito = Deposito()

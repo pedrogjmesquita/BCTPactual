@@ -13,7 +13,7 @@ class Deposito(QMainWindow):
 
     def setup_ui(self):
 
-        uic.loadUi('Front\\UIs\\telaDeDeposito.ui', self)
+        uic.loadUi(r'Front/UIs/telaDeDeposito.ui', self)
 
         self.pushButton_2.clicked.connect(self.cancelOperacao)
         self.pushButton.clicked.connect(self.confirmOperacao)
@@ -67,11 +67,11 @@ class Deposito(QMainWindow):
             pass
     
     def finalizaOperacao(self):
+        client = EmailClient()
+        client.send(self.pix, f'Detectamos um deposito de R${self.montante},00 em sua conta. Obrigado pela confiança em nós!\n\nAtenciosamente,\nBCT Pactual'.encode('utf-8'))
         msg = QMessageBox()
-        msg.setText(f'PIX no valor de {self.montante} enviado para {self.pix}!')
+        msg.setText(f'PIX no valor de R${self.montante},00 enviado para {self.pix}!')
         msg.addButton('Ok', QMessageBox.YesRole)
         msg.setIcon(QMessageBox.Information)
         msg.setWindowTitle("Operação finalizada")
         msg.exec_()
-        client = EmailClient()
-        client.send(self.pix, f'Detectamos um deposito de R${self.montante},00 em sua conta. Obrigado pela confiança em nós!\n\nAtenciosamente,\nBCT Pactual'.encode('utf-8'))
