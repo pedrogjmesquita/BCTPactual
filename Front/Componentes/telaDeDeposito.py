@@ -1,6 +1,8 @@
 from PyQt5 import uic, QtGui
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from Back.email_sender import EmailClient
+import datetime
+
 
 class Deposito(QMainWindow):
 
@@ -60,6 +62,12 @@ class Deposito(QMainWindow):
         
         resposta = msg.buttonRole(msg.clickedButton())
         if resposta == QMessageBox.YesRole:
+            client = EmailClient()
+            client.send(self.pix, f'Detectamos um deposito de R${self.montante},00 em sua conta. Obrigado pela confiança em nós!\n\nAtenciosamente,\nBCT Pactual'.encode('utf-8'))
+            with open(r'Back\transacoes.csv', 'w') as file:
+                # Write some content to the file
+                file.write(f'{datetime.datetime.today().isoformat(timespec='seconds')},{self.pix},{self.montante}\n')
+                
             self.finalizaOperacao()
             
             self.close()
@@ -67,8 +75,6 @@ class Deposito(QMainWindow):
             pass
     
     def finalizaOperacao(self):
-        client = EmailClient()
-        client.send(self.pix, f'Detectamos um deposito de R${self.montante},00 em sua conta. Obrigado pela confiança em nós!\n\nAtenciosamente,\nBCT Pactual'.encode('utf-8'))
         msg = QMessageBox()
         msg.setText(f'PIX no valor de R${self.montante},00 enviado para {self.pix}!')
         msg.addButton('Ok', QMessageBox.YesRole)
