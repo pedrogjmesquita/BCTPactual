@@ -64,9 +64,8 @@ class Deposito(QMainWindow):
         if resposta == QMessageBox.YesRole:
             client = EmailClient()
             client.send(self.pix, f'Detectamos um deposito de R${self.montante},00 em sua conta. Obrigado pela confiança em nós!\n\nAtenciosamente,\nBCT Pactual'.encode('utf-8'))
-            with open(r'Back\transacoes.csv', 'w') as file:
-                # Write some content to the file
-                file.write(f'{datetime.datetime.today().isoformat(timespec='seconds')},{self.pix},{self.montante}\n')
+            with open(r'Back\transacoes.csv', 'a') as file:
+                file.write(f'{datetime.datetime.today().isoformat(timespec="seconds")},{self.pix},{self.montante}\n')
                 
             self.finalizaOperacao()
             
