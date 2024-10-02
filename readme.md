@@ -1,4 +1,4 @@
-# Projeto Microcontroladores
+# Projeto Microcontroladores T2 e T3
 ## EEN251
 **Professores Responsáveis:**
 
@@ -16,7 +16,7 @@
 
 # Conceito/Descrição do Projeto
 O projeto se trata de um ATM que recebe o seu depósito financeiro em cédula ou moeda e transfere o valor para sua conta bancária via PIX.
-O sistema não leva em conta a identificação de cada cédula, além disso, ele apenas enviar um email com uma mensagems a chave informado e não faz o PIX (apenas simulação).
+O sistema não leva em conta a identificação de cada cédula, além disso, ele apenas envia um email com uma mensagem a chave informado e não faz o PIX (apenas simulação).
 
 # Requisitos do Sistema
 | ID | Requisito | Tipo |
