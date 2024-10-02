@@ -1,6 +1,7 @@
 from PyQt5 import uic, QtGui
 from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from Back.email_sender import EmailClient
+from Back.dashboard_feed import DashFeeder
 import datetime
 
 
@@ -64,9 +65,12 @@ class Deposito(QMainWindow):
         if resposta == QMessageBox.YesRole:
             client = EmailClient()
             client.send(self.pix, f'Detectamos um deposito de R${self.montante},00 em sua conta. Obrigado pela confiança em nós!\n\nAtenciosamente,\nBCT Pactual'.encode('utf-8'))
+            
             with open(r'Back\transacoes.csv', 'a') as file:
                 file.write(f'{datetime.datetime.today().isoformat(timespec="seconds")},{self.pix},{self.montante}\n')
-                
+            
+            DashFeeder().send_data('rasp', 'last_transaction', self.montante)  
+            
             self.finalizaOperacao()
             
             self.close()
