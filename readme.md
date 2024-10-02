@@ -35,4 +35,5 @@ O sistema não leva em conta a identificação de cada cédula, além disso, ele
 
 # Esquema Elétrico
 ![EsquemaEletrico 2](https://github.com/user-attachments/assets/35d74eaf-3ed2-4224-b1cd-9cea584d5ec8)
-)
+
+# [Link para o Dashboard Ubidots](https://stem.ubidots.com/app/dashboards/66fd3e4d46a8d539da723cfe?devices=66fd36f00afbd03b487e87c3)
