@@ -19,4 +19,7 @@ class DashFeeder:
 
         response = requests.request("POST", url, headers=headers, data=payload)
 
-        print(response.text)
+        return response.status_code
+
+if __name__ == '__main__':
+    DashFeeder().send_data('rasp', 'last_transaction', 500)
