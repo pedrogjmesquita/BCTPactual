@@ -29,9 +29,9 @@ O projeto se trata de um ATM que recebe o seu depósito financeiro em cédula ou
 
 #  Diagrama de Blocos do Sistema
 
-![digrama de blocos](![diagramasdeblocos](https://github.com/user-attachments/assets/47359740-10e8-4b10-ae90-7e448cc64e88)
-)
+![diagramasdeblocos](https://github.com/user-attachments/assets/47359740-10e8-4b10-ae90-7e448cc64e88)
+
 
 # Esquema Elétrico
-![esquemaeletricofinal](![EsquemaEletrico 2](https://github.com/user-attachments/assets/35d74eaf-3ed2-4224-b1cd-9cea584d5ec8)
+![EsquemaEletrico 2](https://github.com/user-attachments/assets/35d74eaf-3ed2-4224-b1cd-9cea584d5ec8)
 )
