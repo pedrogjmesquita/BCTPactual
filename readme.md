@@ -32,4 +32,5 @@ O projeto se trata de um ATM que recebe o seu depósito financeiro em cédula ou
 ![digrama de blocos](https://github.com/pedrogjmesquita/BCTPactual/issues/2#issue-2562389553)
 
 # Esquema Elétrico
-![esquemaeletricofinal](https://github.com/pedrogjmesquita/BCTPactual/issues/3#issue-2562391449)
+![esquemaeletricofinal](![EsquemaEletrico 2](https://github.com/user-attachments/assets/35d74eaf-3ed2-4224-b1cd-9cea584d5ec8)
+)
