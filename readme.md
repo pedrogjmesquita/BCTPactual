@@ -37,3 +37,17 @@ O sistema não leva em conta a identificação de cada cédula, além disso, ele
 ![EsquemaEletrico 2](https://github.com/user-attachments/assets/35d74eaf-3ed2-4224-b1cd-9cea584d5ec8)
 
 # [Link para o Dashboard Ubidots](https://stem.ubidots.com/app/dashboards/66fd3e4d46a8d539da723cfe?devices=66fd36f00afbd03b487e87c3)
+
+# Vídeo do Projeto
+O vídeo do projeto está no Drive em que todos podem ver, mostramos o funcionamento do projeto e suas telas.
+https://drive.google.com/drive/folders/1wlGMgQY30eijmBQ1gPbfH-8w9c0LMX6u?usp=sharing
+
+# Fotos do Projeto
+![1](https://github.com/user-attachments/assets/c34746f6-ef0d-47a4-8a82-bf800ac2b581)
+![2](https://github.com/user-attachments/assets/e7ce328a-08b4-4410-ab0c-5a8f67b6c255)
+![3](https://github.com/user-attachments/assets/4930fd25-636e-41a2-bf23-ec87aa48df17)
+![4](https://github.com/user-attachments/assets/3d0d2c00-bf4a-44ac-ba3c-8070e7c3c62a)
+![5](https://github.com/user-attachments/assets/006222dd-0984-4a59-ab20-d9c00fa36a81)
+![6](https://github.com/user-attachments/assets/3b9bf52d-5823-497a-b41f-6dfb5f25db16)
+
+
